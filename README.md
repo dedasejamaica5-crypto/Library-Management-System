@@ -78,3 +78,59 @@ The Library Management System provides the following core functionalities:
 ---
 
 ## 📁 Project Structure
+
+
+### File Descriptions
+
+#### `main.py`
+- Entry point for the application
+- Implements the CLI menu interface
+- Handles user input and displays output
+- Calls appropriate service methods based on user choice
+- Implements exception handling for user-friendly error messages
+
+#### `library_service.py`
+- Contains the `LibraryService` class
+- Manages all business logic
+- Maintains data structures for books, members, and loans
+- Validates operations before executing them
+- Generates automatic loan IDs
+
+#### `exceptions.py`
+- Defines 4 custom exception classes:
+  - `BookNotFoundError`
+  - `MemberNotFoundError`
+  - `BookUnavailableError`
+  - `LoanNotFoundError`
+
+#### `book.py`
+- Defines the `Book` class
+- Properties: `book_id`, `title`, `author`, `available`
+- Methods: `borrow()`, `return_book()`
+- String representations for display
+
+#### `member.py`
+- Defines the `Member` class
+- Properties: `member_id`, `name`, `email`
+- String representations for display
+
+#### `loan.py`
+- Defines the `Loan` class
+- Properties: `loan_id`, `book`, `member`, `loan_date`, `return_date`, `is_active`
+- Methods: `close_loan()`
+- Tracks loan timestamps
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+- Python 3.7 or higher
+- Git
+
+### Steps
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/dedasejamaica5-crypto/Library-Management-System.git
+cd Library-Management-System
